@@ -31,6 +31,7 @@ function AppBar() {
         <Box x={{ display: "flex", alignItems: "center", gap: 0.5 }}>
           <SvgIcon
             component={trelloIcon}
+            fontSize="small"
             inheritViewBox
             sx={{ color: "primary.main" }}
           />
