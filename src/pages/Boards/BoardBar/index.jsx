@@ -11,13 +11,13 @@ import { Tooltip } from '@mui/material'
 import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 const MENU_STYLE = {
-  color: 'primary.main',
-  backgroundColor: 'white',
+  color: 'white',
+  backgroundColor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+    color: 'white'
   },
   '&:hover': {
     backgroundColor: 'primary.50'
@@ -77,7 +77,15 @@ function BoardBar() {
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button variant="outlined" startIcon={<PersonAddIcon/>}>Invite</Button>
+        <Button
+         variant="outlined"
+          startIcon={<PersonAddIcon/>}
+          sx = {{ 
+            color : 'white',
+            borderColor: 'white',
+            '&hover': {borderColor: 'white'}
+          }}
+        >Invite</Button>
 
         <AvatarGroup max={6} sx={{
           gap: 0.5,
