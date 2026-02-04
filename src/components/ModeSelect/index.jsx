@@ -15,10 +15,7 @@ function ModeSelect() {
     setMode(event.target.value)
   }
   return (
-    <FormControl size="small" sx={
-      {
-        minWidth: '120px'
-      }}>
+    <FormControl size="small" >
       <InputLabel id="label-select-dark-light-mode" sx={
         {
           color: 'white',
