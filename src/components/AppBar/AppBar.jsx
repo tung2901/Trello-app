@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import ModeSelect from "~/components/ModeSelect";
+import ModeSelect from "~/components/ModeSelect/ModeSelect";
 import AppsIcon from "@mui/icons-material/Apps";
 import { ReactComponent as trelloIcon } from "~/assets/trello.svg";
 import SvgIcon from "@mui/icons-material/Apps";
@@ -39,7 +39,7 @@ function AppBar() {
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
         <AppsIcon sx={{ color: "white" }} />
-        <Box x={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
           <SvgIcon
             component={trelloIcon}
             fontSize="small"
@@ -48,7 +48,7 @@ function AppBar() {
           />
           <Typography
             sx={{
-              fontSize: "1.2 rem",
+              fontSize: "1.2rem",
               fontWeight: "bold",
               color: "white",
             }}

@@ -10,6 +10,7 @@ import AvatarGroup from '@mui/material/AvatarGroup'
 import { Tooltip } from '@mui/material'
 import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
+import { capitalizeFirstLetter } from '~/ultis/formatters'
 const MENU_STYLE = {
   color: 'white',
   backgroundColor: 'transparent',
@@ -23,7 +24,7 @@ const MENU_STYLE = {
     backgroundColor: 'primary.50'
   }
 }
-function BoardBar() {
+function BoardBar({board}) {
   return (
     <Box sx={{
       width: '100%',
@@ -33,8 +34,7 @@ function BoardBar() {
       justifyContent: 'space-between',
       gap: 2,
       overflowX: 'auto',
-      backgroundColor: (theme) => (theme.palette.mode === 'light' ? 'white' : '#34495e'),
-      borderBottom: '1px solid white',
+      backgroundColor: '#34495e',
       paddingX: 2
     }}>
       <Box sx={
@@ -47,13 +47,13 @@ function BoardBar() {
         <Chip
           sx={MENU_STYLE}
           icon={<DashboardIcon />}
-          label="MER"
+          label={capitalizeFirstLetter(board?.type)}
           onClick={() => {}}
         />
         <Chip
           sx={MENU_STYLE}
           icon={<VpnLockIcon />}
-          label="Public/Private/Workspace"
+          label={board?.type}
           onClick={() => {}}
         />
         <Chip
